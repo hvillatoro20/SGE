@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG-Equipos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>SG-Equipos</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido a SG-Equipos</h2>
+        <p>En SG-Equipos, estamos comprometidos con brindar soluciones confiables y de calidad para todas sus necesidades de equipos, productos y materiales médicos. Explore nuestro catálogo en línea y haga su pedido hoy mismo.</p>
+    </section>
+
+    <section id="tienda">
+        <h2>Tienda</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="Img\imagen1.jpg" alt="Estetoscopio">
+                <p>Estetoscopio - L.3559.00</p>
+                <button onclick="agregarCarrito('Estetoscopio', 3559)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="Img\imagen2.jpg" alt="Medidor de presión digital">
+                <p>Medidor de presión digital - L.1650.00</p>
+                <button onclick="agregarCarrito('Medidor de presión', 1650)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="Img\imagen3.jpg" alt="Oxímetro">
+                <p>Oxímetro - L.675.00</p>
+                <button onclick="agregarCarrito('Oxímetro', 675)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div id="carrito">
+            <h3>Carrito de Compras</h3>
+            <ul id="lista-carrito"></ul>
+            <p>Total: L.<span id="total">0</span></p>
+            <button id="pagar" onclick="pagar()">Pagar con PayPal</button>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En SG-Equipos, nuestra misión es ser su aliado en el cuidado de la salud, ofreciendo calidad y confianza en cada uno de nuestros productos.</p>
+    </section>
+
+    <section id="horarios">
+        <h2>Horarios de Atención</h2>
+        <p>Lunes a viernes: 8:00 am a 5:00 pm</p>
+        <p>Sábados: 8:00 am a 12:00 pm</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <button onclick="window.open('https://wa.me/50431538031')">Conectar con WhatsApp</button>
+        <button onclick="window.location.href='mailto:ventas@solucionesglobalesyequipos.com'">Enviar un correo</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SG-Equipos S. de R.L.</p>
+    </footer>
+</body>
+</html>
